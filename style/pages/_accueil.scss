@@ -1,0 +1,205 @@
+//Heder
+.header-accueil {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+//Section localisation
+.localisation {
+  background-color: #e6e6e6;
+  padding: 17px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 5px 15px 5px -10px lightgrey;
+  font-size: 18px;
+}
+
+.text-localisation {
+  margin-left: 10px;
+}
+
+//Section découverte
+.decouverte {
+  background-color: $gris-clair;
+  padding: 10px 5px 50px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titre-decouverte {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.text-decouverte {
+  width: 80%;
+  text-align: center;
+}
+
+//Section fonctionnement
+.bloc-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titre-fonctionnement {
+  padding: 20px 0 10px 8%;
+}
+
+.bloc-etape {
+  height: 80px;
+  width: 80%;
+  display: flex;
+  background-color: $gris-clair;
+  align-items: center;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  box-shadow: $shadow-block;
+  &--rose {
+    @include rose($color-primary);
+  }
+}
+
+.bloc-etape__chiffre {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -12px;
+}
+
+.fa-circle {
+  font-size: 25px;
+  width: 100%;
+  position: absolute;
+  color: $color-primary;
+}
+
+.text-chiffre {
+  position: relative;
+  color: white;
+}
+
+.bloc-etape__logo {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-mobile-alt {
+  @extend %logo-color;
+}
+
+.fa-ellipsis-v {
+  @extend %logo-color;
+}
+
+.fa-bars {
+  @extend %logo-color;
+}
+
+.fa-store {
+  @extend %logo-color;
+  &--violet {
+    color: $color-primary;
+  }
+}
+
+.bloc-etape__text {
+  font-weight: 700;
+}
+
+.logo-tel-grand {
+  font-size: 20px;
+}
+
+//Article restaurant
+.restaurant {
+  background-color: $gris-clair;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+.contain-block-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.block-carte {
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-block;
+  border-radius: 20px;
+  width: 90%;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.contain-img {
+  width: 100%;
+  height: 170px;
+}
+
+.img-restau {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 90px;
+  background-color: #99e2d0;
+  color: #268a71;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 2px;
+}
+
+.contain-text {
+  padding-top: 25px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+}
+
+.titre-restau {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 20px;
+
+  width: 100%;
+}
+
+.info-carte {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-top: 25px;
+}
+
+.block-carte > a {
+  text-decoration: none;
+  color: black;
+}
+.fa-heart {
+  font-size: 25px;
+}

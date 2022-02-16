@@ -1,0 +1,56 @@
+.bigBloc {
+  border-radius: 40px 40px 0 0;
+  background-color: $gris-clair;
+  position: relative;
+  margin-top: 230px;
+  padding-top: 10px;
+  @include paddingLR(5%, 5%);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__titre {
+    font-family: "Shrikhand", sans-serif;
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    padding-right: 5%;
+  }
+}
+
+.typePlat {
+  &__titre {
+    margin-top: 50px;
+  }
+  &__ligne {
+    border-top: 3px solid $color-tertiary;
+    width: 40px;
+    margin-top: 4px;
+  }
+}
+.bloctypePlat {
+  background-color: white;
+  @include paddingLR(4%, 5%);
+  border-radius: 20px;
+  padding-bottom: 13px;
+  box-shadow: $shadow-block;
+  &__titre {
+    padding-top: 15px;
+    margin-bottom: 5px;
+  }
+  &__contenu {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__contenuPrix {
+    font-weight: 700;
+  }
+}
+.contain-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}

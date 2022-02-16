@@ -1,0 +1,10 @@
+@mixin gris-fonce($color) {
+  color: darken($color, 50%);
+}
+@mixin rose($color) {
+  background-color: lighten($color, 35%);
+}
+@mixin paddingLR($val1, $val2) {
+  padding-left: $val1;
+  padding-right: $val2;
+}
