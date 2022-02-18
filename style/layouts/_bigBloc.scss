@@ -36,6 +36,13 @@
   border-radius: 20px;
   padding-bottom: 13px;
   box-shadow: $shadow-block;
+  opacity: 0;
+  animation: apparition $animDur forwards;
+  @for $i from 1 through 3 {
+    &--#{$i} {
+      animation-delay: $animDelay * $i;
+    }
+  }
   &__titre {
     padding-top: 15px;
     margin-bottom: 5px;
@@ -48,6 +55,16 @@
     font-weight: 700;
   }
 }
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .contain-btn {
   @include dcenter;
   padding-top: 50px;

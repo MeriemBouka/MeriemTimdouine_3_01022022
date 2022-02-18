@@ -112,6 +112,24 @@ header {
   padding-bottom: 13px;
   -webkit-box-shadow: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
           box-shadow: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
+  opacity: 0;
+  -webkit-animation: apparition 1500ms forwards;
+          animation: apparition 1500ms forwards;
+}
+
+.bloctypePlat--1 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.bloctypePlat--2 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.bloctypePlat--3 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
 
 .bloctypePlat__titre {
@@ -130,6 +148,24 @@ header {
 
 .bloctypePlat__contenuPrix {
   font-weight: 700;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .contain-btn {
@@ -232,8 +268,8 @@ footer {
   border-radius: 50%;
   -webkit-transform: rotate(0.2turn);
           transform: rotate(0.2turn);
-  -webkit-animation: chargement 2000ms forwards linear 2;
-          animation: chargement 2000ms forwards linear 2;
+  -webkit-animation: chargement 1000ms 500ms forwards linear 2;
+          animation: chargement 1000ms 500ms forwards linear 2;
 }
 
 @-webkit-keyframes chargement {
@@ -263,8 +299,8 @@ footer {
 .page {
   -webkit-animation: page infinite forwards;
           animation: page infinite forwards;
-  -webkit-animation-delay: 4000ms;
-          animation-delay: 4000ms;
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
   opacity: 0;
 }
 

@@ -19,7 +19,7 @@
     border-top-color: $color-primary;
     border-radius: 50%;
     transform: rotate(0.2turn);
-    animation: chargement $chargement-dur forwards linear 2;
+    animation: chargement $chargement-dur $chargement-delay forwards linear 2;
   }
 }
 @keyframes chargement {
