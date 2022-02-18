@@ -49,8 +49,7 @@
   }
 }
 .contain-btn {
-  display: flex;
-  justify-content: center;
+  @include dcenter;
   padding-top: 50px;
   padding-bottom: 70px;
 }

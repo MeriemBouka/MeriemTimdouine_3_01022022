@@ -1,8 +1,55 @@
+//chargement
+.contain-chargement {
+  width: 100%;
+  @include dcenter;
+  height: 600px;
+  align-items: center;
+  position: absolute;
+}
+.chargement {
+  @include dcenter;
+  position: absolute;
+  z-index: 1;
+  &::after {
+    content: "";
+    opacity: 1;
+    width: 60px;
+    height: 60px;
+    border: 10px solid lightgray;
+    border-top-color: $color-primary;
+    border-radius: 50%;
+    transform: rotate(0.2turn);
+    animation: chargement $chargement-dur forwards linear 2;
+  }
+}
+@keyframes chargement {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(2turn);
+    opacity: 0;
+  }
+}
+.page {
+  animation: page infinite forwards;
+  animation-delay: $page-delay;
+  opacity: 0;
+}
+@keyframes page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 //Heder
 .header-accueil {
   padding-top: 20px;
-  display: flex;
-  justify-content: center;
+  @include dcenter;
   margin-bottom: 15px;
 }
 
@@ -10,8 +57,7 @@
 .localisation {
   background-color: #e6e6e6;
   padding: 17px 0;
-  display: flex;
-  justify-content: center;
+  @include dcenter;
   box-shadow: inset 5px 15px 5px -10px lightgrey;
   font-size: 18px;
 }
@@ -69,8 +115,7 @@
   width: 25px;
   height: 25px;
   position: relative;
-  display: flex;
-  justify-content: center;
+  @include dcenter;
   align-items: center;
   margin-left: -12px;
 }
@@ -89,8 +134,7 @@
 
 .bloc-etape__logo {
   width: 15%;
-  display: flex;
-  justify-content: center;
+  @include dcenter;
 }
 
 .fa-mobile-alt {
@@ -159,8 +203,7 @@
 }
 
 .new {
-  display: flex;
-  justify-content: center;
+  @include dcenter;
   align-items: center;
   height: 35px;
   width: 90px;

@@ -3,3 +3,8 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $gris-clair: #f6f6f6;
 $shadow-block: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
+$shadow-btn: 0 4px 8px 0 rgb(182, 181, 181);
+$shadow-btnD: 0 10px 8px 0 rgb(100, 99, 99);
+$chargement-dur: 2000ms;
+$chargement-delay: 1000ms;
+$page-delay: $chargement-dur + $chargement-delay * 2;

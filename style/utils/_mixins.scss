@@ -8,3 +8,7 @@
   padding-left: $val1;
   padding-right: $val2;
 }
+@mixin dcenter {
+  display: flex;
+  justify-content: center;
+}

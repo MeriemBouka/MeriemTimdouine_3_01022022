@@ -21,6 +21,18 @@ html {
           justify-content: center;
   padding: 15px 0 15px 0;
   border-radius: 40px;
+  border: 0;
+  -webkit-box-shadow: 0 4px 8px 0 #b6b5b5;
+          box-shadow: 0 4px 8px 0 #b6b5b5;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0 10px 8px 0 #646363;
+          box-shadow: 0 10px 8px 0 #646363;
 }
 
 .img-top {
@@ -182,6 +194,96 @@ footer {
 .contact {
   text-decoration: none;
   color: white;
+}
+
+.contain-chargement {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.chargement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.chargement::after {
+  content: "";
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+  border: 10px solid lightgray;
+  border-top-color: #9356dc;
+  border-radius: 50%;
+  -webkit-transform: rotate(0.2turn);
+          transform: rotate(0.2turn);
+  -webkit-animation: chargement 2000ms forwards linear 2;
+          animation: chargement 2000ms forwards linear 2;
+}
+
+@-webkit-keyframes chargement {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+    opacity: 0;
+  }
+}
+
+@keyframes chargement {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+    opacity: 0;
+  }
+}
+
+.page {
+  -webkit-animation: page infinite forwards;
+          animation: page infinite forwards;
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
+  opacity: 0;
+}
+
+@-webkit-keyframes page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header-accueil {
