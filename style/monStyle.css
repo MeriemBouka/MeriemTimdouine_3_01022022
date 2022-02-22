@@ -80,9 +80,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .bigBloc__titre {
@@ -94,47 +94,53 @@ header {
   padding-right: 5%;
 }
 
-.typePlat__titre {
-  margin-top: 50px;
-}
-
 .typePlat__ligne {
   border-top: 3px solid #99e2d0;
   width: 40px;
   margin-top: 4px;
 }
 
+.typePlat__titre {
+  margin-top: 50px;
+}
+
 .bloctypePlat {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
   background-color: white;
-  padding-left: 4%;
-  padding-right: 5%;
   border-radius: 20px;
-  padding-bottom: 13px;
   -webkit-box-shadow: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
           box-shadow: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
   opacity: 0;
-  -webkit-animation: apparition 1500ms forwards;
-          animation: apparition 1500ms forwards;
+  -webkit-animation: apparition 900ms forwards;
+          animation: apparition 900ms forwards;
 }
 
 .bloctypePlat--1 {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 .bloctypePlat--2 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 
 .bloctypePlat--3 {
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
 }
 
 .bloctypePlat__titre {
-  padding-top: 15px;
-  margin-bottom: 5px;
+  margin: 0;
+  padding-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .bloctypePlat__contenu {
@@ -148,6 +154,15 @@ header {
 
 .bloctypePlat__contenuPrix {
   font-weight: 700;
+}
+
+.bloctypePlat__contenuResum {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @-webkit-keyframes apparition {
@@ -175,8 +190,106 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 50px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.bloctypePlat--1,
+.bloctypePlat--2,
+.bloctypePlat--3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bloc-sans-anim {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 2%;
+  padding-right: 5%;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  flex-grow: 1;
+}
+
+.bloc-avec-anim {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99e2d0;
+  border-radius: 0 20% 20% 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+}
+
+.fa-check-circle {
+  color: white;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition-duration: 0ms;
+          transition-duration: 0ms;
+}
+
+.bloctypePlat:hover .bloc-avec-anim {
+  width: 80px;
+}
+
+.bloctypePlat:hover .bloc-avec-anim > .fa-check-circle {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.bigBloc__icon {
+  position: relative;
+}
+
+.bigBloc__icon:hover > .coeur {
+  opacity: 0;
+}
+
+.bigBloc__icon:hover > .coeur-fill {
+  opacity: 1;
+}
+
+.coeur {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: all 500ms ease-in-out 0s;
+  transition: all 500ms ease-in-out 0s;
+}
+
+.coeur-fill {
+  cursor: pointer;
+  background: linear-gradient(178deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out 0s;
+  transition: all 500ms ease-in-out 0s;
 }
 
 footer {
@@ -260,7 +373,6 @@ footer {
 
 .chargement::after {
   content: "";
-  opacity: 1;
   width: 60px;
   height: 60px;
   border: 10px solid lightgray;
@@ -274,24 +386,24 @@ footer {
 
 @-webkit-keyframes chargement {
   from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(2turn);
-            transform: rotate(2turn);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     opacity: 0;
   }
 }
 
 @keyframes chargement {
   from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(2turn);
-            transform: rotate(2turn);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     opacity: 0;
   }
 }
@@ -347,8 +459,23 @@ footer {
   font-size: 18px;
 }
 
+.conteneur-localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .text-localisation {
   margin-left: 10px;
+  border: none;
+  background-color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 170px;
 }
 
 .decouverte {
@@ -410,8 +537,12 @@ footer {
           box-shadow: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
 }
 
-.bloc-etape--rose {
+.bloc-etape:hover {
   background-color: #f2eafb;
+}
+
+.bloc-etape:hover .icone {
+  color: #9356dc;
 }
 
 .bloc-etape__chiffre {
@@ -442,7 +573,7 @@ footer {
   color: white;
 }
 
-.bloc-etape__logo {
+.bloc-etape__icone {
   width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,15 +583,11 @@ footer {
           justify-content: center;
 }
 
-.fa-store--violet {
-  color: #9356dc;
-}
-
 .bloc-etape__text {
   font-weight: 700;
 }
 
-.logo-tel-grand {
+.icone-tel-grand {
   font-size: 20px;
 }
 

@@ -12,7 +12,7 @@
   z-index: 1;
   &::after {
     content: "";
-    opacity: 1;
+
     width: 60px;
     height: 60px;
     border: 10px solid lightgray;
@@ -24,11 +24,11 @@
 }
 @keyframes chargement {
   from {
-    transform: rotate(0turn);
+    transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(2turn);
+    transform: rotate(360deg);
     opacity: 0;
   }
 }
@@ -62,8 +62,16 @@
   font-size: 18px;
 }
 
+.conteneur-localisation {
+  @include dcenter;
+}
+
 .text-localisation {
   margin-left: 10px;
+  border: none;
+  background-color: #e6e6e6;
+  display: flex;
+  width: 170px;
 }
 
 //Section découverte
@@ -106,9 +114,12 @@
   margin-bottom: 25px;
   border-radius: 20px;
   box-shadow: $shadow-block;
-  &--rose {
-    @include rose($color-primary);
+  &:hover {
+    @include color-light($color-primary);
   }
+}
+.bloc-etape:hover .icone {
+  color: $color-primary;
 }
 
 .bloc-etape__chiffre {
@@ -132,35 +143,32 @@
   color: white;
 }
 
-.bloc-etape__logo {
+.bloc-etape__icone {
   width: 15%;
   @include dcenter;
 }
 
 .fa-mobile-alt {
-  @extend %logo-color;
+  @extend %icone-color;
 }
 
 .fa-ellipsis-v {
-  @extend %logo-color;
+  @extend %icone-color;
 }
 
 .fa-bars {
-  @extend %logo-color;
+  @extend %icone-color;
 }
 
 .fa-store {
-  @extend %logo-color;
-  &--violet {
-    color: $color-primary;
-  }
+  @extend %icone-color;
 }
 
 .bloc-etape__text {
   font-weight: 700;
 }
 
-.logo-tel-grand {
+.icone-tel-grand {
   font-size: 20px;
 }
 
@@ -227,7 +235,6 @@
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
-
   width: 100%;
 }
 

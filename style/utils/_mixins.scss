@@ -1,7 +1,7 @@
 @mixin gris-fonce($color) {
   color: darken($color, 50%);
 }
-@mixin rose($color) {
+@mixin color-light($color) {
   background-color: lighten($color, 35%);
 }
 @mixin paddingLR($val1, $val2) {
@@ -11,4 +11,10 @@
 @mixin dcenter {
   display: flex;
   justify-content: center;
+}
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
 }
