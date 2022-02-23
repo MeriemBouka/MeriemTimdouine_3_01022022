@@ -8,4 +8,13 @@ header {
   justify-content: space-around;
   width: 80%;
   align-items: center;
+  @include desktop-only {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.fa-arrow-left {
+  @include desktop-only {
+    padding-right: 20px;
+  }
 }

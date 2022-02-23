@@ -60,6 +60,10 @@
   @include dcenter;
   box-shadow: inset 5px 15px 5px -10px lightgrey;
   font-size: 18px;
+  @include desktop-only {
+    width: 50%;
+    @include marginAuto;
+  }
 }
 
 .conteneur-localisation {
@@ -81,6 +85,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include desktop-only {
+    width: 49%;
+    @include marginAuto;
+  }
 }
 
 .titre-decouverte {
@@ -103,6 +111,10 @@
 
 .titre-fonctionnement {
   padding: 20px 0 10px 8%;
+  @include desktop-only {
+    @include dcenter;
+    padding-left: 0;
+  }
 }
 
 .bloc-etape {
@@ -116,6 +128,9 @@
   box-shadow: $shadow-block;
   &:hover {
     @include color-light($color-primary);
+  }
+  @include desktop-only {
+    width: 50%;
   }
 }
 .bloc-etape:hover .icone {
@@ -185,6 +200,11 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 60px;
+  @include desktop-only {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .block-carte {
@@ -196,6 +216,10 @@
   position: relative;
   padding-bottom: 15px;
   margin-bottom: 20px;
+  @include desktop-only {
+    width: 40%;
+    margin: 1%;
+  }
 }
 
 .contain-img {
@@ -236,6 +260,10 @@
   font-weight: 700;
   font-size: 20px;
   width: 100%;
+  @include desktop-only {
+    @include dcenter;
+    padding-bottom: 30px;
+  }
 }
 
 .info-carte {

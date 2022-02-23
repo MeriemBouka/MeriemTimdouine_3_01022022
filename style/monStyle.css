@@ -9,6 +9,7 @@ html {
 }
 
 .btn {
+  cursor: pointer;
   width: 210px;
   background: #ff79da;
   background: linear-gradient(178deg, #ff79da 0%, #9356dc 100%);
@@ -63,6 +64,21 @@ header {
           align-items: center;
 }
 
+@media screen and (min-width: 992px) {
+  .logo {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fa-arrow-left {
+    padding-right: 20px;
+  }
+}
+
 .bigBloc {
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
@@ -85,6 +101,12 @@ header {
           align-items: baseline;
 }
 
+@media screen and (min-width: 992px) {
+  .bigBloc__header {
+    width: 90%;
+  }
+}
+
 .bigBloc__titre {
   font-family: "Shrikhand", sans-serif;
   margin-bottom: 0;
@@ -92,6 +114,23 @@ header {
 
 .bigBloc__icon {
   padding-right: 5%;
+}
+
+@media screen and (min-width: 992px) {
+  .bigBloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .typePlat__ligne {
@@ -102,6 +141,22 @@ header {
 
 .typePlat__titre {
   margin-top: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .typePlat {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .bloctypePlat {
@@ -183,6 +238,12 @@ header {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .bloctypePlat {
+    width: 90%;
+  }
+}
+
 .contain-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,6 +253,18 @@ header {
           justify-content: center;
   padding-top: 40px;
   padding-bottom: 80px;
+}
+
+@media screen and (min-width: 992px) {
+  .contain-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+  }
 }
 
 .bloctypePlat--1,
@@ -239,8 +312,8 @@ header {
 
 .fa-check-circle {
   color: white;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
   -webkit-transition: -webkit-transform 500ms;
   transition: -webkit-transform 500ms;
   transition: transform 500ms;
@@ -459,6 +532,14 @@ footer {
   font-size: 18px;
 }
 
+@media screen and (min-width: 992px) {
+  .localisation {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .conteneur-localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,6 +574,14 @@ footer {
           align-items: center;
 }
 
+@media screen and (min-width: 992px) {
+  .decouverte {
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .titre-decouverte {
   width: 70%;
   text-align: center;
@@ -521,6 +610,18 @@ footer {
   padding: 20px 0 10px 8%;
 }
 
+@media screen and (min-width: 992px) {
+  .titre-fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+  }
+}
+
 .bloc-etape {
   height: 80px;
   width: 80%;
@@ -539,6 +640,12 @@ footer {
 
 .bloc-etape:hover {
   background-color: #f2eafb;
+}
+
+@media screen and (min-width: 992px) {
+  .bloc-etape {
+    width: 50%;
+  }
 }
 
 .bloc-etape:hover .icone {
@@ -612,6 +719,20 @@ footer {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 992px) {
+  .contain-block-carte {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .block-carte {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,6 +748,13 @@ footer {
   position: relative;
   padding-bottom: 15px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .block-carte {
+    width: 40%;
+    margin: 1%;
+  }
 }
 
 .contain-img {
@@ -680,6 +808,18 @@ footer {
   font-weight: 700;
   font-size: 20px;
   width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .titre-restau {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+  }
 }
 
 .info-carte {
