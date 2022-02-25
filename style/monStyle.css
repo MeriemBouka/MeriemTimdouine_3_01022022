@@ -586,6 +586,7 @@ footer {
   width: 70%;
   text-align: center;
   margin-bottom: 0;
+  font-size: 1.5em;
 }
 
 .text-decouverte {
@@ -788,6 +789,10 @@ footer {
   top: 10px;
   right: 10px;
   border-radius: 2px;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 .contain-text {
